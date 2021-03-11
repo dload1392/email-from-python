@@ -36,7 +36,7 @@ email_subject = input("제목을 입력해주세요. :")
 email_to = input("상대방의 이메일을 입력해주세요. :")
 email_content = input("내용을 입력해주세요. :")
 
-my_email = "##################"
+my_email = "#####EMAIL#####"
 
 # MIME Header의 경우 [] 사용
 msg["Subject"] = email_subject
@@ -53,7 +53,7 @@ image_type = imghdr.what('test_image', image_file)
 msg.add_attachment(image_file, maintype='image', subtype=image_type)
 
 smtp = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT)      # SMTP(server, port)
-smtp.login(my_email, "#######")
+smtp.login(my_email, "###PASSWORD###")
 
 # Call sendEmail to verify and send an email
 sendEmail(email_to)
